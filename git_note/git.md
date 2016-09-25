@@ -5,3 +5,17 @@ $ git config --global user.name "填你的名字"
 $ git config --global user.email "填你的email地址"
 
 ###创建版本库
+
+创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
+
+    $ mkdir learngit
+    $ cd learngit
+    $ pwd
+    /Users/michael/learngit
+
+pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/michael/learngit。
+    
+**如果你使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。**
+
+
+
