@@ -55,9 +55,9 @@ pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/m
 
 为什么Git添加文件需要`add`，`commit`一共两步呢？因为`commit`可以一次提交很多文件，所以你可以多次`add`不同的文件，比如：
 
-    $ git add file1.txt
-    $ git add file2.txt file3.txt
-    $ git commit -m "add 3 files."
+> $ git add file1.txt
+> $ git add file2.txt file3.txt
+> $ git commit -m **"add 3 files."**
 
 
 
