@@ -3,3 +3,5 @@
 Gist:
 $ git config --global user.name "填你的名字"
 $ git config --global user.email "填你的email地址"
+
+###创建版本库
