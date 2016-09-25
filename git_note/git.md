@@ -4,8 +4,7 @@ Gist:
 $ git config --global user.name "填你的名字"
 $ git config --global user.email "填你的email地址"
 
-###创建版本库
-
+### 创建版本库
 创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
 
     $ mkdir learngit
@@ -24,5 +23,21 @@ pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/m
 
 **如果你使用Windows系统，为了避免遇到各种莫名其妙的问题，请确保目录名（包括父目录）不包含中文。**
 
+### 把文件添加到版本库
+所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Microsoft的Word格式是二进制格式，所以没法跟踪。
+    
+    因为文本是有编码的，强烈建议使用标准的UTF-8编码
+
+现在我们编写一个`readme.txt`文件，内容如下：
+
+    Git is a version control system.
+    Git is free software.
+
+一定要放到`learngit`目录下（子目录也行），因为这是一个Git仓库，放到其他地方Git再厉害也找不到这个文件。  
+把一个文件放到Git仓库只需要两步。
+
+第一步，用命令git add告诉Git，把文件添加到仓库：
+
+    $ git add readme.txt
 
 
