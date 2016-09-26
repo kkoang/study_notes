@@ -62,6 +62,36 @@ Git告诉我们当前没有需要提交的修改，而且，工作目录是干�
 * 要随时掌握工作区的状态，使用`git status`命令。
 * 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
 
+### 版本回退
+`git log`命令显示从**最近到最远**的提交日志
+
+如果嫌输出信息太多，看得眼花缭乱的，可以试试加上`--pretty=oneline`参数：
+
+    $ git log --pretty=oneline
+    3628164fb26d48395383f8f31179f24e0882e1e0 append GPL
+
+你看到的一大串类似`3628164...882e1e0`的是`commit id`（版本号），
+
+我们要把当前版本“append GPL”回退到上一个版本“add distributed”，就可以使用`git reset`命令：
+
+    $ git reset --hard HEAD^
+
+`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个`^`比较容易数不过来，所以写成`HEAD~100`
+
+> `HEAD^`跟`HEAD~1`效果一样。
+
+Git提供了一个命令`git reflog`用来记录你的每一次命令：
+
+    $ git reflog
+
+> `git reflog`看到记录，可以回到指定的`commit id`版本
+
+#### 版本回退小结
+* HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`。
+* 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
+* 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
+
+
 
 
 
