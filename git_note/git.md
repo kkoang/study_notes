@@ -7,16 +7,18 @@ $ git config --global user.email "填你的email地址"
 ### 创建版本库
 创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
 
-    $ mkdir learngit
-    $ cd learngit
-    $ pwd
-    /Users/michael/learngit
+```bash
+$ mkdir learngit //创建名叫learngit的文件夹
+$ cd learngit //进入learngit文件夹
+$ pwd //显示现在在哪里
+/Users/michael/learngit
+```
 
 pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/michael/learngit。
 
 第二步，通过`git init`命令把这个目录变成Git可以管理的仓库：
 
-    $ git init
+    $ git init //把当前目录变为git可管理仓库
     Initialized empty Git repository in /Users/michael/learngit/.git/
 
 瞬间Git就把仓库建好了，而且告诉你是一个空的仓库（empty Git repository），`.git`的目录，这个目录是Git来跟踪管理版本库的，**没事千万不要手动修改这个目录里面的文件**，不然改乱了，就把Git仓库给破坏了。如果你没有看到`.git`目录，那是因为**这个目录默认是隐藏的**，用`ls -ah`命令就可以看见。
@@ -28,7 +30,7 @@ pwd命令用于显示当前目录。在我的Mac上，这个仓库位于/Users/m
 第一步，使用命令`git add <file>`，注意，可反复多次使用，添加多个文件；  
 第二步，使用命令`git commit`，完成。
 
-### 把文件添加到版本库
+#### 把文件添加到版本库
 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Microsoft的Word格式是二进制格式，所以没法跟踪。
     
     因为文本是有编码的，强烈建议使用标准的UTF-8编码
