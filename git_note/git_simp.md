@@ -28,7 +28,7 @@ commit可以一次提交很多文件，所以你可以多次add不同的文件�
     $ git add file2.txt file3.txt
     $ git commit -m "add 3 files."
 
-### 创建版本库小结
+#### 创建版本库小结
 
 现在总结一下今天学的两点内容：  
 初始化一个Git仓库，使用`git init`命令。  
