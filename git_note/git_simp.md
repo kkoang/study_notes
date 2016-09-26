@@ -18,7 +18,7 @@ $ pwd //显示现在在哪里
 
     $ git add readme.txt //添加名为readme的文件到
 
-第二步，用命令`git commit`告诉Git，把文件提交到仓库,记得加`-m "本次提交的说明"`：
+第二步，用命令`git commit`告诉Git，把文件提交到仓库,记得加`-m "本次提交的说明"`也可以不加，非强制，最好是加：
 
     $ git commit -m "wrote a readme file"
 
