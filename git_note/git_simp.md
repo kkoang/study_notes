@@ -59,8 +59,8 @@ commit可以一次提交很多文件，所以你可以多次add不同的文件�
 
 Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working directory clean）的。
 
-要随时掌握工作区的状态，使用`git status`命令。
-如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
+* 要随时掌握工作区的状态，使用`git status`命令。
+* 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
 
 
 
