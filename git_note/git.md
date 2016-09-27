@@ -246,11 +246,11 @@ Git告诉我们当前没有需要提交的修改，而且，工作目录是干�
 
 Git的版本回退速度非常快，因为Git在内部有个指向当前版本的`HEAD`指针，当你回退版本的时候，Git仅仅是把HEAD从指向`append GPL`：
 
-    git-head
+!()[http://www.liaoxuefeng.com/files/attachments/001384907584977fc9d4b96c99f4b5f8e448fbd8589d0b2000/0]
 
 改为指向`add distributed`：
 
-    git-head-move
+!()[http://www.liaoxuefeng.com/files/attachments/001384907594057a873c79f14184b45a1a66b1509f90b7a000/0]
 
 然后顺便把工作区的文件更新了。所以你让`HEAD`指向哪个版本号，你就把当前版本定位在哪。
 
@@ -265,9 +265,6 @@ Git的版本回退速度非常快，因为Git在内部有个指向当前版本�
     cb926e7 HEAD@{3}: commit (initial): wrote a readme file
 
 终于舒了口气，第二行显示`append GPL`的commit id是`3628164`，现在，你又可以乘坐时光机回到未来了。
-
-`HEAD`指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`。
-
-穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
-
-要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
+* `HEAD`指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令`git reset --hard commit_id`。
+* 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
+* 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
