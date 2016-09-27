@@ -9,7 +9,7 @@ $ cd learngit //进入learngit文件夹
 $ pwd //显示现在在哪里
 ```
 
-第二步，通过git init命令把这个目录变成Git可以管理的仓库：
+第二步，通过`git init`命令把这个目录变成Git可以管理的仓库：
 
     $ git init //把当前目录变为git可管理仓库
     Initialized empty Git repository in /Users/michael/learngit/.git/
@@ -39,7 +39,7 @@ commit可以一次提交很多文件，所以你可以多次add不同的文件�
 ## 时光机穿梭
 修改readme.txt文件  
 `git status`命令可以让我们时刻掌握仓库当前的状态，上面的命令告诉我们，readme.txt被修改过了，但还没有准备提交的修改。  
-如果记不清上次怎么修改的readme.txt，所以，需要用git diff这个命令看看：
+如果记不清上次怎么修改的readme.txt，所以，需要用`git diff`这个命令看看：
 
     $ git diff readme.txt 
 
