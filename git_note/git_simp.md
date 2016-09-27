@@ -92,9 +92,16 @@ Git提供了一个命令`git reflog`用来记录你的每一次命令：
 * 穿梭前，用`git log`可以查看提交历史，以便确定要回退到哪个版本。
 * 要重返未来，用`git reflog`查看命令历史，以便确定要回到未来的哪个版本。
 
+### 工作区和暂存区
+Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的概念。先来看名词解释。
 
+**工作区（Working Directory）** 就是你在电脑里能看到的目录，比如我的`learngit`文件夹就是一个工作区：
 
+**版本库（Repository）** 工作区有一个隐藏目录`.git`，这个不算工作区，而是Git的版本库。
 
+![](http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0)
+
+> 个人理解`stage`是暂存区
 
 
 
