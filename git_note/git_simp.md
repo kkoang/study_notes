@@ -169,6 +169,23 @@ Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的�
 
 输入`yes`回车即可。
 
+### 从远程库克隆
+先用GitHub，创建一个新的仓库，名字叫`gitskills`。  
+勾选`Initialize this repository with a README`，GitHub会自动为我们创建一个`README.md`文件
+
+远程库已经准备好了，下一步是用命令`git clone`克隆一个本地库：
+
+    $ git clone git@github.com:kkoang/gitskills.git
+
+    $ cd gitskills
+    $ ls
+    README.md
+
+> 要克隆一个仓库，首先必须知道仓库的地址，然后使用`git clone`命令克隆。
+> Git支持多种协议，包括`https`，但通过`ssh`支持的原生`git`协议速度最快。
+
+
+
 
 
 
