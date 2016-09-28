@@ -205,7 +205,7 @@ Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的�
     $ git checkout master
     $ git merge dev
 
-**小结**
+#### 创建与合并分支小结
 
 Git鼓励大量使用分支：
 
