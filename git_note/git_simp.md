@@ -187,12 +187,39 @@ Git和其他版本控制系统如SVN的一个不同之处就是有暂存区的�
 ## 分支管理
 > 其实就是在主分支分出来一段分支，这段分支可以等到开发完之后再合并到主分支。
 
+### 创建与合并分支
 
+创建`dev`分支，然后切换到`dev`分支：
 
+    $ git checkout -b dev
 
+`git checkout`命令加上`-b`参数表示创建并切换，相当于以下两条命令：
 
+    $ git branch dev
+    $ git checkout dev
 
+> `git branch`命令会列出所有分支，查看当前指向哪个分支，当前分支前面会标一个`*`号。
 
+把`dev`分支的工作成果合并到master分支上。
+
+    $ git checkout master
+    $ git merge dev
+
+**小结**
+
+Git鼓励大量使用分支：
+
+查看分支：`git branch`
+
+创建分支：`git branch <name>`
+
+切换分支：`git checkout <name>`
+
+创建+切换分支：`git checkout -b <name>`
+
+合并某分支到当前分支：`git merge <name>`
+
+删除分支：`git branch -d <name>`
 
 
 .
