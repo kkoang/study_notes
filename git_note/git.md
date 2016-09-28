@@ -688,7 +688,7 @@ Git会输出一个警告，告诉你已经把GitHub的Key添加到本机的一�
 
 如果你实在担心有人冒充GitHub服务器，输入`yes`前可以对照[GitHub的RSA Key的指纹信息](https://help.github.com/articles/what-are-github-s-ssh-key-fingerprints/)是否与SSH连接给出的一致。
 
-**小结**
+**小结**  
 要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git`；
 
 关联后，使用命令`git push -u origin master`第一次推送master分支的所有内容；
