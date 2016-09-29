@@ -221,5 +221,40 @@ Git鼓励大量使用分支：
 
 删除分支：`git branch -d <name>`
 
+创建一个新的分支叫`xx`
+
+    git checkout -b xx
+
+修改文件`readme.txt`然后提交到`xx`分支上：
+
+    add>commit
+
+切换到master分支：
+
+    $ git checkout master
+
+在`master`分支上把readme.txt文件的修改,然后提交：
+
+`git checkout master`HEAD指向master再合并分支`git merge xx`
+
+这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来（`<<<`,`+++`,`>>>`),需要人工合并之后再提交最终合并版本。
+
+> 合并失败进`(xx|MERGING)`人工修改合并文件之后，add>commit（提交）后为最终修改版本，可以删除合并的分支`xx`
+
+
+
+
+
+
+
 
 .
+
+
+
+
+
+
+
+
+
