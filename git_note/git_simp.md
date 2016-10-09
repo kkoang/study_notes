@@ -251,3 +251,47 @@ Git鼓励大量使用分支：
 
 
 .
+### 分支管理策略
+
+创建并切换`dev`分支：
+
+    $ git checkout -b dev
+
+修改readme.txt文件，并提交一个新的commit：
+
+    $ git add readme.txt 
+    $ git commit -m "add merge"
+
+切换回master：
+
+    $ git checkout master
+
+合并`dev`分支，请注意`--no-ff`参数，表示禁用`Fast forward`：
+
+    $ git merge --no-ff -m "merge with no-ff" dev
+
+因为本次合并要创建一个新的commit，所以加上`-m`参数，把commit描述写进去。
+
+不使用`Fast forward`模式，merge后就像这样：
+
+![](http://www.liaoxuefeng.com/files/attachments/001384909222841acf964ec9e6a4629a35a7a30588281bb000/0)
+
+使用`Fast forward`模式，merge后就像这样：
+
+![](http://www.liaoxuefeng.com/files/attachments/0013849088235627813efe7649b4f008900e5365bb72323000/0)
+
+`$ git checkout master` 切换回`master`分支后,
+
+`$ git merge dev`把`dev`分支的工作成果合并到`master`分支上
+
+`master`指针指向`dev`再删除`dev`
+
+![](http://www.liaoxuefeng.com/files/attachments/00138490883510324231a837e5d4aee844d3e4692ba50f5000/0)
+
+
+
+
+
+
+
+
