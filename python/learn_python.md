@@ -43,14 +43,12 @@ Python代码的以`.py`为扩展名的文本文件,要运行代码，就需要Py
     这样运行时会自动搜索脚本解释器的绝对路径。
 
 ### 输入和输出
-**输入**
-
     print("hello","逗号,连接字符会输出空格")
     print(2+3)#也可以打印整数,或计算结果
     print("字符串跟数字连接",2,"as"+"d")#两字符串不加空格连接用加号+
 
-    name=input('please enter your name: ')#input()可以加入提示信息
-    print('hello,',name)
+    name=input('please enter your name: ')    #input()可以加入提示信息
+    print('hello,',name)    #input输入数字得到也是字符串，可以用int()进行类型的转换
 python 连接字符串和数字
 
     a = 222 ; b = '333'
@@ -61,7 +59,7 @@ python 连接字符串和数字
     c = str(a) + b
     c = str(a) + b
     print(c)
-
+    
 > #开头的语句是注释，当语句以冒号:结尾时，缩进的语句视为代码块。
 > 缩进应该使用4个空格的缩进。Python程序的大小写敏感。
 > 文本编辑器中，需要设置把Tab自动转换为4个空格，确保不混用Tab和空格。
