@@ -86,35 +86,42 @@ python 连接字符串和数字
 Python的浮点数也没有大小限制，但是超出一定范围就直接表示为`inf`（无限大）。
 
 ### 字符串和编码
-因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理,
-8个比特位（bit）作为一个字节（byte）,一个字符(char)等于若干字节（不固定）。
-字符0用ASCII编码是十进制的48，二进制的00110000，注意字符'0'和整数0是不同的。
-汉字中已经超出了ASCII编码的范围，用Unicode编码是十进制的20013，二进制的01001110 00101101。
-如果要传输的文本包含大量英文字符，用UTF-8编码就能节省空间
-Python的字符串
-最新的Python 3版本中，字符串是以Unicode编码，也就是说，Python的字符串支持多语言，比如中文。
-单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符。
-ord('A') #65
-ord('中') #20013
-chr(66) #'B'
-chr(25991) #'文"
-如果知道字符的整数编码，还可以用十六进制这么写str：
->>> '\u4e2d\u6587' #两种写法完全是等价的
-'中文' #两种写法完全是等价的
-如果要在网络上传输，或者保存到磁盘上，就需要把str变为以字节为单位的bytes。
-Python对bytes类型的数据用带b前缀的单引号或双引号表示：
-x = b'ABC'
-要注意区分'ABC'和b'ABC'，前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节。
-以Unicode表示的str通过encode()方法可以编码为指定的bytes
->>> 'ABC'.encode('ascii')
-b'ABC'
->>> '中文'.encode('utf-8')
-b'\xe4\xb8\xad\xe6\x96\x87'
->>> '中文'.encode('ascii')
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
+因为计算机只能处理数字，如果要处理文本，就必须先把文本转换为数字才能处理,  
+8个比特位（bit）作为一个字节（byte）,一个字符(char)等于若干字节（不固定）。  
+字符`'0'`用`ASCII`编码是十进制的`48`，二进制的`00110000`，注意字符`'0'`和整数`0`是不同的。  
+汉字中已经超出了`ASCII`编码的范围，用`Unicode`编码是十进制的`20013`，二进制的`01001110 00101101`。  
+如果要传输的文本包含大量英文字符，用`UTF-8`编码就能节省空间  
 
+|字符|ASCII|Unicode|UTF-8|
+|------|:-------:|:-------:|-----:|
+|A|01000001|00000000 01000001|01000001|
+|中|x|01001110 00101101|11100100 10111000 10101101|
+
+**字符串**
+最新的Python 3版本中，字符串是以`Unicode编码`，也就是说，Python的字符串支持多语言，比如中文。
+单个字符的编码，Python提供了`ord()`函数获取字符的整数表示，`chr()`函数把编码转换为对应的字符。
+
+    ord('A') #65
+    ord('中') #20013
+    chr(66) #'B'
+    chr(25991) #'文"
+如果知道字符的整数编码，还可以用十六进制这么写str：  
+`'\u4e2d\u6587' #两种写法完全是等价的`  
+`'中文' #两种写法完全是等价的`  
+如果要在网络上传输，或者保存到磁盘上，就需要把`str`变为以字节为单位的`bytes`。  
+Python对`bytes`类型的数据用带`b前缀`的单引号或双引号表示：  
+x = b'ABC'  
+要注意区分`'ABC'`和`b'ABC'`，前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节。  
+以Unicode表示的str通过`encode()`方法可以编码为指定的bytes
+
+    >>> 'ABC'.encode('ascii')
+    b'ABC'
+    >>> '中文'.encode('utf-8')
+    b'\xe4\xb8\xad\xe6\x96\x87'
+    >>> '中文'.encode('ascii')
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    UnicodeEncodeError: 'ascii' codec can't encode characters in position 0-1: ordinal not in range(128)
 #小明的成绩从去年的72分提升到了今年的85分，请计算小明成绩提升的百分点
 s1 = 72
 s2 = 85
