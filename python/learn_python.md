@@ -19,12 +19,12 @@ Python代码的以`.py`为扩展名的文本文件,要运行代码，就需要Py
 `exit()`退出Python的交互式环境  
 执行`python 对应文件名.py`运行一个`.py`文件
 
-直接运行py文件,在Mac和Linux上是可以的，方法是在.py文件的第一行加上一个特殊的注释：
+直接运行python(.py)文件,在Mac和Linux上是可以的，方法是在`.py`文件的第一行加上一个特殊的注释：
 
     #!/usr/bin/env python3
     print('hello, world')
 
-这是脚本语言共同遵守的规则：当第一行为 #!/path/to/script/interpreter时，指定了用来执行本脚本的解释器。
+这是脚本语言共同遵守的规则：当第一行为`#!/path/to/script/interpreter`时，指定了用来执行本脚本的解释器。
 
     注意：
     1、必须是文件的第一行
@@ -59,7 +59,7 @@ python 连接字符串和数字
     c = str(a) + b
     c = str(a) + b
     print(c)
-    
+
 > #开头的语句是注释，当语句以冒号:结尾时，缩进的语句视为代码块。
 > 缩进应该使用4个空格的缩进。Python程序的大小写敏感。
 > 文本编辑器中，需要设置把Tab自动转换为4个空格，确保不混用Tab和空格。
