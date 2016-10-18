@@ -1,7 +1,6 @@
 # GIMP像素画视频教程笔记
 <http://tieba.baidu.com/p/4108287625>
 
-
 NO.1 软件设置_铅笔_橡皮_自定义笔刷 
 <http://site.douban.com/163509/widget/notes/8695193/note/519377107/>
 
@@ -23,7 +22,6 @@ R选框选中之后，复制，编辑-粘贴为-新画笔。笔的大小是，�
 
 NO.2 矩形_圆_任意直线_曲线 
 <http://site.douban.com/163509/widget/notes/8695193/note/519637195/>
-
 
 铅笔工具按住Shfit画任意直线
 
@@ -51,6 +49,8 @@ Ctrl+A 全选 或 R框选要缩放的选区 再 Shift+T  拖动或填数值都�
 
 > 拖动框的上半部分是点（拖）哪里是哪，下半部分是拖动微调，单击可以输入修改数值。
 
+> 区域框好之后 Shift+F 鼠标左键=水平旋转 Ctrl+鼠标左键=垂直旋转
+
 NO.3 ISO像素画基础_盒子_线稿_光源_上色 
 <http://site.douban.com/163509/widget/notes/8695193/note/519783253/>
 
@@ -59,8 +59,19 @@ GIMP直接存储的是GIMP专属格式XCF，如需要存为PNG或其他格式（
 NO.4 像素鸡蛋 
 <http://site.douban.com/163509/widget/notes/8695193/note/520143865/>
 
-
+找到合适的素材图片或者先用画笔画出草图；  
+然后描出像素线稿；  
+确定光源后再上色；  
+使用铅笔的时候，按住Ctrl可以快速吸取颜色；  
+记得一定要保存GIMP的专有格式(也支持导出PSD格式)，方便再次编辑和修改；  
+导出设置一次后，按Ctrl+E可以快速导出。
 
 NO.5 东方电视塔 
 <http://site.douban.com/163509/widget/notes/8695193/note/520308940/>
 <http://site.douban.com/163509/widget/notes/8695193/note/520478004/>
+
+
+
+
+
+
