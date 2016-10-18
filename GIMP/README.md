@@ -51,12 +51,15 @@ Ctrl+A 全选 或 R框选要缩放的选区 再 Shift+T  拖动或填数值都�
 
 > 拖动框的上半部分是点（拖）哪里是哪，下半部分是拖动微调，单击可以输入修改数值。
 
-
 NO.3 ISO像素画基础_盒子_线稿_光源_上色 
 <http://site.douban.com/163509/widget/notes/8695193/note/519783253/>
 
+GIMP直接存储的是GIMP专属格式XCF，如需要存为PNG或其他格式（支持PSD格式），可以使用导出，快捷键是Ctrl+Shift+E。
+
 NO.4 像素鸡蛋 
 <http://site.douban.com/163509/widget/notes/8695193/note/520143865/>
+
+
 
 NO.5 东方电视塔 
 <http://site.douban.com/163509/widget/notes/8695193/note/520308940/>
