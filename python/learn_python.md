@@ -977,25 +977,6 @@ Python函数在定义的时候，默认参数`L`的值就被计算出来了，�
     14
 `*nums`表示把`nums`这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 **关键字参数**
 
 可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装为一个`tuple`。而关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个`dict`。请看示例：
@@ -1022,4 +1003,14 @@ Python函数在定义的时候，默认参数`L`的值就被计算出来了，�
     >>> extra = {'city': 'Beijing', 'job': 'Engineer'}
     >>> person('Jack', 24, **extra)
     name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
-**extra表示把extra这个dict的所有key-value用关键字参数传入到函数的**kw参数，kw将获得一个dict，注意kw获得的dict是extra的一份拷贝，对kw的改动不会影响到函数外的extra。
+`**extra表示`把`extra`这个dict的所有key-value用关键字参数传入到函数的`**kw`参数，`kw`将获得一个dict，注意`kw`获得的dict是`extra`的一份拷贝，对`kw`的改动不会影响到函数外的`extra`。
+
+
+
+
+
+
+
+
+
+
