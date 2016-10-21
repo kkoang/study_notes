@@ -798,7 +798,7 @@ Python内置的常用函数还包括数据类型转换函数，比如`int()`函�
 
 Python的函数定义非常简单，但灵活度却非常大。除了正常定义的必选参数外，还可以使用默认参数、可变参数和关键字参数，使得函数定义出来的接口，不但能处理复杂的参数，还可以简化调用者的代码。
 
-位置参数
+**位置参数**
 
 我们先写一个计算x^2的函数：
 
@@ -822,39 +822,39 @@ Python的函数定义非常简单，但灵活度却非常大。除了正常定�
             n = n - 1
             s = s * x
         return s
-对于这个修改后的power(x, n)函数，可以计算任意n次方：
+对于这个修改后的`power(x, n)`函数，可以计算任意n次方：
 
->>> power(5, 2)
-25
->>> power(5, 3)
-125
-修改后的power(x, n)函数有两个参数：x和n，这两个参数都是位置参数，调用函数时，传入的两个值按照位置顺序依次赋给参数x和n。
+    >>> power(5, 2)
+    25
+    >>> power(5, 3)
+    125
+修改后的`power(x, n)`函数有两个参数：`x`和`n`，这两个参数都是位置参数，调用函数时，传入的两个值按照位置顺序依次赋给参数`x`和`n`。
 
-默认参数
+**默认参数**
 
-新的power(x, n)函数定义没有问题，但是，旧的调用代码失败了，原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用：
+新的`power(x, n)`函数定义没有问题，但是，旧的调用代码失败了，原因是我们增加了一个参数，导致旧的代码因为缺少一个参数而无法正常调用：
 
->>> power(5)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: power() missing 1 required positional argument: 'n'
-Python的错误信息很明确：调用函数power()缺少了一个位置参数n。
+    >>> power(5)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: power() missing 1 required positional argument: 'n'
+Python的错误信息很明确：调用函数`power()`缺少了一个位置参数`n`。
 
-这个时候，默认参数就排上用场了。由于我们经常计算x2，所以，完全可以把第二个参数n的默认值设定为2：
+这个时候，默认参数就排上用场了。由于我们经常计算x^2，所以，完全可以把第二个参数n的默认值设定为2：
 
-def power(x, n=2):
-    s = 1
-    while n > 0:
-        n = n - 1
-        s = s * x
-    return s
-这样，当我们调用power(5)时，相当于调用power(5, 2)：
+    def power(x, n=2):
+        s = 1
+        while n > 0:
+            n = n - 1
+            s = s * x
+        return s
+这样，当我们调用`power(5)`时，相当于调用`power(5, 2)`：
 
->>> power(5)
-25
->>> power(5, 2)
-25
-而对于n > 2的其他情况，就必须明确地传入n，比如power(5, 3)。
+    >>> power(5)
+    25
+    >>> power(5, 2)
+    25
+而对于`n > 2`的其他情况，就必须明确地传入n，比如`power(5, 3)`。
 
 从上面的例子可以看出，默认参数可以简化函数的调用。设置默认参数时，有几点要注意：
 
@@ -866,70 +866,70 @@ def power(x, n=2):
 
 使用默认参数有什么好处？最大的好处是能降低调用函数的难度。
 
-举个例子，我们写个一年级小学生注册的函数，需要传入name和gender两个参数：
+举个例子，我们写个一年级小学生注册的函数，需要传入`name`和`gender`两个参数：
 
-def enroll(name, gender):
-    print('name:', name)
-    print('gender:', gender)
-这样，调用enroll()函数只需要传入两个参数：
+    def enroll(name, gender):
+        print('name:', name)
+        print('gender:', gender)
+这样，调用`enroll()`函数只需要传入两个参数：
 
->>> enroll('Sarah', 'F')
-name: Sarah
-gender: F
+    >>> enroll('Sarah', 'F')
+    name: Sarah
+    gender: F
 如果要继续传入年龄、城市等信息怎么办？这样会使得调用函数的复杂度大大增加。
 
 我们可以把年龄和城市设为默认参数：
 
-def enroll(name, gender, age=6, city='Beijing'):
-    print('name:', name)
-    print('gender:', gender)
-    print('age:', age)
-    print('city:', city)
-这样，大多数学生注册时不需要提供年龄和城市，只提供必须的两个参数：
+    def enroll(name, gender, age=6, city='Beijing'):
+        print('name:', name)
+        print('gender:', gender)
+        print('age:', age)
+        print('city:', city)
+这样，大多数学生注册时不需要提供年龄和城市，只提供`必须的两个参数`：
 
->>> enroll('Sarah', 'F')
-name: Sarah
-gender: F
-age: 6
-city: Beijing
+    >>> enroll('Sarah', 'F')
+    name: Sarah
+    gender: F
+    age: 6
+    city: Beijing
 只有与默认参数不符的学生才需要提供额外的信息：
 
-enroll('Bob', 'M', 7)
-enroll('Adam', 'M', city='Tianjin')
+    enroll('Bob', 'M', 7)
+    enroll('Adam', 'M', city='Tianjin')
 可见，默认参数降低了函数调用的难度，而一旦需要更复杂的调用时，又可以传递更多的参数来实现。无论是简单调用还是复杂调用，函数只需要定义一个。
 
-有多个默认参数时，调用的时候，既可以按顺序提供默认参数，比如调用enroll('Bob', 'M', 7)，意思是，除了name，gender这两个参数外，最后1个参数应用在参数age上，city参数由于没有提供，仍然使用默认值。
+有多个默认参数时，调用的时候，既可以按顺序提供默认参数，比如调用`enroll('Bob', 'M', 7)`，意思是，除了`name`，`gender`这两个参数外，最后1个参数应用在参数`age`上，`city`参数由于没有提供，仍然使用默认值。
 
-也可以不按顺序提供部分默认参数。当不按顺序提供部分默认参数时，需要把参数名写上。比如调用enroll('Adam', 'M', city='Tianjin')，意思是，city参数用传进去的值，其他默认参数继续使用默认值。
+也可以不按顺序提供部分默认参数。当不按顺序提供部分默认参数时，需要把参数名写上。比如调用`enroll('Adam', 'M', city='Tianjin')`，意思是，`city`参数用传进去的值，其他默认参数继续使用默认值。
 
 默认参数很有用，但使用不当，也会掉坑里。默认参数有个最大的坑，演示如下：
 
-先定义一个函数，传入一个list，添加一个END再返回：
+先定义一个函数，传入一个list，添加一个`END`再返回：
 
-def add_end(L=[]):
-    L.append('END')
-    return L
+    def add_end(L=[]):
+        L.append('END')
+        return L
 当你正常调用时，结果似乎不错：
 
->>> add_end([1, 2, 3])
-[1, 2, 3, 'END']
->>> add_end(['x', 'y', 'z'])
-['x', 'y', 'z', 'END']
+    >>> add_end([1, 2, 3])
+    [1, 2, 3, 'END']
+    >>> add_end(['x', 'y', 'z'])
+    ['x', 'y', 'z', 'END']
 当你使用默认参数调用时，一开始结果也是对的：
 
->>> add_end()
-['END']
-但是，再次调用add_end()时，结果就不对了：
+    >>> add_end()
+    ['END']
+但是，再次调用`add_end()`时，结果就不对了：
 
->>> add_end()
-['END', 'END']
->>> add_end()
-['END', 'END', 'END']
-很多初学者很疑惑，默认参数是[]，但是函数似乎每次都“记住了”上次添加了'END'后的list。
+    >>> add_end()
+    ['END', 'END']
+    >>> add_end()
+    ['END', 'END', 'END']
+很多初学者很疑惑，默认参数是`[]`，但是函数似乎每次都“记住了”上次添加了`'END'`后的list。
 
 原因解释如下：
 
-Python函数在定义的时候，默认参数L的值就被计算出来了，即[]，因为默认参数L也是一个变量，它指向对象[]，每次调用该函数，如果改变了L的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的[]了。
+Python函数在定义的时候，默认参数`L`的值就被计算出来了，即`[]`，因为默认参数`L`也是一个变量，它指向对象`[]`，每次调用该函数，如果改变了`L`的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的`[]`了。
 
 所以，定义默认参数要牢记一点：默认参数必须指向不变对象！
 
