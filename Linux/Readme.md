@@ -8,7 +8,7 @@
  - 不能写入数据，只能包含逻辑分区
 - 逻辑分区
 
-数据块block默认4kb
+数据块block默认4kb  
 访问文件先查表，概念假设，I节点(INODE)、修改时间、权限。
 
 [http://www.imooc.com/video/3244/]
@@ -40,6 +40,12 @@
  - /boot (启动分区，200MB )
  
 逻辑分区一定是从5开始分
+
+6个纯命令行界面`[Ctrl]+[Alt]+[F1]～[F6]`,图形界面`[Ctrl]+[Alt]+[F7]`
+
+`Ctrl+c`强行终止当前程序|`Ctrl+d`退出终端|`Ctrl+z`将当前程序放到后台运行，恢复到前台为命令`fg`|`Ctrl+a`相当于`Home`键,`Ctrl+a`相当于`End`键|`Ctrl+k`删除从光标所在位置到行末|`Ctrl+u`删除从光标所在位置到行首|`Alt+Backspace`向前删除一个单词|`Shift+PgUp`将终端显示向上滚动|`Shift+PgDn`将终端显示向下滚动|`Ctrl+P`相当于`上`键|`Ctrl+N`相当于`下`键|`Ctrl+H`相当于`Backspace`键
+
+
 
 
 
